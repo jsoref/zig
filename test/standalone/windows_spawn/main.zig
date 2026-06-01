@@ -45,9 +45,9 @@ pub fn main(init: std.process.Init) !void {
     // Move hello.exe into the tmp dir which is now added to the path
     try Io.Dir.cwd().copyFile(hello_exe_cache_path, tmp_dir, "hello.exe", io, .{});
 
-    // with extension should find the .exe (case insensitive)
+    // with extension should find the .exe (case-insensitive)
     try testExec(gpa, io, "HeLLo.exe", "hello from exe\n");
-    // without extension should find the .exe (case insensitive)
+    // without extension should find the .exe (case-insensitive)
     try testExec(gpa, io, "heLLo", "hello from exe\n");
     // with invalid cwd
     try std.testing.expectError(error.FileNotFound, testExecWithCwd(gpa, io, "hello.exe", "missing_dir", ""));
@@ -57,9 +57,9 @@ pub fn main(init: std.process.Init) !void {
     // and a .cmd
     try tmp_dir.writeFile(io, .{ .sub_path = "hello.cmd", .data = "@echo hello from cmd" });
 
-    // with extension should find the .bat (case insensitive)
+    // with extension should find the .bat (case-insensitive)
     try testExec(gpa, io, "heLLo.bat", "hello from bat\r\n");
-    // with extension should find the .cmd (case insensitive)
+    // with extension should find the .cmd (case-insensitive)
     try testExec(gpa, io, "heLLo.cmd", "hello from cmd\r\n");
     // without extension should find the .exe (since its first in PATHEXT)
     try testExec(gpa, io, "heLLo", "hello from exe\n");
@@ -69,7 +69,7 @@ pub fn main(init: std.process.Init) !void {
 
     // with extension should now fail
     try testExecError(error.FileNotFound, gpa, io, "hello.exe");
-    // without extension should succeed (case insensitive)
+    // without extension should succeed (case-insensitive)
     try testExec(gpa, io, "heLLo", "hello from exe\n");
 
     try tmp_dir.createDir(io, "something", .default_dir);
