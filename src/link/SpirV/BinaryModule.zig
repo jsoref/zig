@@ -275,7 +275,7 @@ pub const Parser = struct {
 
     /// Parse offsets in the instruction that contain result-ids.
     /// Returned offsets are relative to inst.operands.
-    /// Returns in an arraylist to armortize allocations.
+    /// Returns in an arraylist to amortize allocations.
     pub fn parseInstructionResultIds(
         self: *Parser,
         binary: BinaryModule,
