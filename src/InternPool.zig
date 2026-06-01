@@ -9401,7 +9401,7 @@ pub fn getErrorSetType(
 }
 
 pub const GetFuncInstanceKey = struct {
-    /// Has the length of the instance function (may be lesser than
+    /// Has the length of the instance function (may be less than
     /// comptime_args).
     param_types: []Index,
     /// Has the length of generic_owner's parameters (may be greater than
