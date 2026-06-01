@@ -377,7 +377,7 @@ pub const Flags = packed struct {
     /// Whether this symbol is a thread-local variable.
     tlv: bool = false,
 
-    /// Whether the symbol makes into the output symtab or not.
+    /// Whether or not the symbol makes into the output symtab.
     output_symtab: bool = false,
 
     /// ZigObject specific flags

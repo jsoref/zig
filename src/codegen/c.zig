@@ -4001,7 +4001,7 @@ fn airCall(
 fn airDbgStmt(f: *Function, inst: Air.Inst.Index) !CValue {
     const dbg_stmt = f.air.instructions.items(.data)[@intFromEnum(inst)].dbg_stmt;
     const w = &f.code.writer;
-    // TODO re-evaluate whether to emit these or not. If we naively emit
+    // TODO re-evaluate whether or not to emit these. If we naively emit
     // these directives, the output file will report bogus line numbers because
     // every newline after the #line directive adds one to the line.
     // We also don't print the filename yet, so the output is strictly unhelpful.
