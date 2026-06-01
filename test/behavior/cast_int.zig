@@ -33,7 +33,7 @@ test "coerce i8 to i32 and @intCast back" {
     try expect(y2 == @as(i8, @intCast(x2)));
 }
 
-test "coerce non byte-sized integers accross 32bits boundary" {
+test "coerce non byte-sized integers across 32bits boundary" {
     if (builtin.zig_backend == .stage2_riscv64) return error.SkipZigTest; // TODO
 
     {
