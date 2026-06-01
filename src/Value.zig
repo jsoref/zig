@@ -940,7 +940,7 @@ pub fn anyScalarIsUndef(val: Value, zcu: *const Zcu) bool {
 
 /// `val` must have a numeric or vector type.
 /// Returns whether `val` contains any elements equal to zero.
-/// Asserts that `val` is not `undefined`, nor a vector containing any `undefined` elements.
+/// Asserts that `val` is neither `undefined` nor a vector containing any `undefined` elements.
 pub fn anyScalarIsZero(val: Value, zcu: *Zcu) bool {
     assert(!val.anyScalarIsUndef(zcu));
 
