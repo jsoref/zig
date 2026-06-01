@@ -287,7 +287,7 @@ Using the start menu, run **x64 Native Tools Command Prompt for VS 2019** and ex
 - `-Thost=x64` : Sets the windows toolset to use 64 bit mode.
 - `-A x64` : Make the build target 64 bit .
 - `-G "Visual Studio 16 2019"` : Specifies to generate a 2019 Visual Studio project, the best supported version.
-- `-DCMAKE_INSTALL_PREFIX=""` : Path that llvm components will being installed into by the install project.
+- `-DCMAKE_INSTALL_PREFIX=""` : Path that llvm components will be installed into by the install project.
 - `-DCMAKE_PREFIX_PATH=""` : Path that CMake will look into first when trying to locate dependencies, should be the same place as the install prefix. This will ensure that clang and lld will use your newly built llvm libraries.
 - `-DLLVM_ENABLE_ZLIB=OFF` : Don't build llvm with ZLib support as it's not required and will disrupt the target dependencies for components linking against llvm. This only has to be passed when building llvm, as this option will be saved into the config headers.
 - `-DCMAKE_BUILD_TYPE=Release` : Build llvm and components in release mode.
