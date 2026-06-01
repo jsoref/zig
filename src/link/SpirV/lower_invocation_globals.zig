@@ -22,7 +22,7 @@ const ModuleInfo = struct {
         param_types: []const ResultId,
         /// The set of (result-id's of) invocation globals that are accessed
         /// in this function, or after resolution, that are accessed in this
-        /// function or any of it's callees.
+        /// function or any of its callees.
         invocation_globals: std.AutoArrayHashMapUnmanaged(ResultId, void),
     };
 
