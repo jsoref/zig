@@ -4500,8 +4500,8 @@ comptime {
       <p>{#syntax#}@TypeOf(operand){#endsyntax#} must be an integer type or an integer vector type with bit count evenly divisible by 8.</p>
       <p>{#syntax#}operand{#endsyntax#} may be an {#link|integer|Integers#} or {#link|vector|Vectors#}.</p>
       <p>
-      Swaps the byte order of the integer. This converts a big-endian integer to a little endian integer,
-      and converts a little endian integer to a big-endian integer.
+      Swaps the byte order of the integer. This converts a big-endian integer to a little-endian integer,
+      and converts a little-endian integer to a big-endian integer.
       </p>
       <p>
       Note that for the purposes of memory layout with respect to endianness, the integer type should be

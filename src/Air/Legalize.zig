@@ -149,11 +149,11 @@ pub const Feature = enum {
     expand_mul_safe,
 
     /// Replace `load` from a packed pointer with a non-packed `load`, `shr`, `truncate`.
-    /// Currently assumes little endian and a specific integer layout where the lsb of every integer is the lsb of the
+    /// Currently assumes little-endian and a specific integer layout where the lsb of every integer is the lsb of the
     /// first byte of memory until bit pointers know their backing type.
     expand_packed_load,
     /// Replace `store` and `store_safe` to a packed pointer with a non-packed `load`/`store`, `bit_and`, `bit_or`, and `shl`.
-    /// Currently assumes little endian and a specific integer layout where the lsb of every integer is the lsb of the
+    /// Currently assumes little-endian and a specific integer layout where the lsb of every integer is the lsb of the
     /// first byte of memory until bit pointers know their backing type.
     expand_packed_store,
     /// Replace `struct_field_val` of a packed field with a `bitcast` to integer, `shr`, `trunc`, and `bitcast` to field type.
