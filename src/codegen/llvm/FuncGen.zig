@@ -5722,7 +5722,7 @@ fn buildReducedCall(
     const accum_ptr = try self.buildAlloca(llvm_result_ty, .default);
     _ = try self.wip.store(.normal, accum_init, accum_ptr, .default);
 
-    // Setup the loop
+    // Set up the loop
     const loop = try self.wip.block(2, "ReduceLoop");
     const loop_exit = try self.wip.block(1, "AfterReduce");
     _ = try self.wip.br(loop);

@@ -5602,7 +5602,7 @@ fn airIsNonErrPtr(func: *Func, inst: Air.Inst.Index) !void {
 }
 
 fn airLoop(func: *Func, inst: Air.Inst.Index) !void {
-    // A loop is a setup to be able to jump back to the beginning.
+    // A loop is set up to be able to jump back to the beginning.
     const body = func.air.unwrapBlock(inst);
     func.scope_generation += 1;
     const state = try func.saveState();
@@ -5635,7 +5635,7 @@ fn airBlock(func: *Func, inst: Air.Inst.Index) !void {
 }
 
 fn lowerBlock(func: *Func, inst: Air.Inst.Index, body: []const Air.Inst.Index) !void {
-    // A block is a setup to be able to jump to the end.
+    // A block is set up to be able to jump to the end.
     const inst_tracking_i = func.inst_tracking.count();
     func.inst_tracking.putAssumeCapacityNoClobber(inst, InstTracking.init(.unreach));
 

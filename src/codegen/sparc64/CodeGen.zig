@@ -1088,7 +1088,7 @@ fn airBlock(self: *Self, inst: Air.Inst.Index) !void {
 
 fn lowerBlock(self: *Self, inst: Air.Inst.Index, body: []const Air.Inst.Index) !void {
     try self.blocks.putNoClobber(self.gpa, inst, .{
-        // A block is a setup to be able to jump to the end.
+        // A block is set up to be able to jump to the end.
         .relocs = .empty,
         // It also acts as a receptacle for break operands.
         // Here we use `MCValue.none` to represent a null value so that the first
@@ -1745,7 +1745,7 @@ fn airLoad(self: *Self, inst: Air.Inst.Index) !void {
 }
 
 fn airLoop(self: *Self, inst: Air.Inst.Index) !void {
-    // A loop is a setup to be able to jump back to the beginning.
+    // A loop is set up to be able to jump back to the beginning.
     const block = self.air.unwrapBlock(inst);
     const start: u32 = @intCast(self.mir_instructions.len);
 
