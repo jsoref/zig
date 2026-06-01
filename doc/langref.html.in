@@ -2664,7 +2664,7 @@ or
       {#code|test_inline_else.zig#}
 
       <p>
-      When using an inline prong switching on an union an additional capture
+      When using an inline prong switching on a union, an additional capture
       can be used to obtain the union's enum tag value at comptime, even though
       its payload might only be known at runtime.
       </p>
