@@ -179,7 +179,7 @@ mir_indirect_function_set: std.AutoArrayHashMapUnmanaged(InternPool.Nav.Index, v
 mir_func_tys: std.AutoArrayHashMapUnmanaged(InternPool.Index, void),
 /// The number of `error_name_table_ref` instructions emitted.
 error_name_table_ref_count: u32,
-/// When a function is executing, we store the the current stack pointer's value within this local.
+/// When a function is executing, we store the current stack pointer's value within this local.
 /// This value is then used to restore the stack pointer to the original value at the return of the function.
 initial_stack_value: WValue = .none,
 /// The current stack pointer subtracted with the stack size. From this value, we will calculate

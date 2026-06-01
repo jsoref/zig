@@ -2365,7 +2365,7 @@ pub const LazySrcLoc = struct {
         node_offset_var_decl_init: Ast.Node.Offset,
         /// The source location points to the given argument of a builtin function call.
         /// `builtin_call_node` points to the builtin call.
-        /// `arg_index` is the index of the argument which hte source location refers to.
+        /// `arg_index` is the index of the argument which the source location refers to.
         node_offset_builtin_call_arg: struct {
             builtin_call_node: Ast.Node.Offset,
             arg_index: u32,

@@ -3771,7 +3771,7 @@ pub fn populateTestFunctions(pt: Zcu.PerThread) Allocator.Error!void {
     // analyzed and sent to codegen, It usually will have been, because the test runner will
     // reference it, and `std.lang` shouldn't have type errors. However, if it hasn't been
     // analyzed, we will just terminate early, since clearly the test runner hasn't referenced
-    // `test_functions` so there's no point populating it. More to the the point, we potentially
+    // `test_functions` so there's no point populating it. More to the point, we potentially
     // *can't* populate it without doing some type resolution, and... let's try to leave Sema in
     // the past here.
 
