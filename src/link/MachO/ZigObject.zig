@@ -1010,7 +1010,7 @@ fn updateNavCode(
 }
 
 /// Lowering a TLV on macOS involves two stages:
-/// 1. first we lower the initializer into appopriate section (__thread_data or __thread_bss)
+/// 1. first we lower the initializer into appropriate section (__thread_data or __thread_bss)
 /// 2. next, we create a corresponding threadlocal variable descriptor in __thread_vars
 fn updateTlv(
     self: *ZigObject,
