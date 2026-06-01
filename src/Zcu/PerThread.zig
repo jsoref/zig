@@ -3384,7 +3384,7 @@ fn analyzeFuncBodyInner(
     try sema.air_instructions.ensureUnusedCapacity(gpa, fn_info.total_params_len);
     try sema.inst_map.ensureSpaceForInstructions(gpa, fn_info.param_body);
 
-    // In the case of a generic function instance, pre-populate all the comptime args.
+    // In the case of a generic function instance, prepopulate all the comptime args.
     if (func.comptime_args.len != 0) {
         for (
             fn_info.param_body[0..func.comptime_args.len],
