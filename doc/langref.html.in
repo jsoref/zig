@@ -7318,7 +7318,7 @@ fn readU32Be() u32 {}
             <pre>{#syntax#}const{#endsyntax#}</pre>
           </th>
           <td>
-            {#syntax#}const{#endsyntax#} declares a variable that can not be modified.
+            {#syntax#}const{#endsyntax#} declares a variable that cannot be modified.
             Used as a pointer attribute, it denotes the value referenced by the pointer cannot be modified.
             <ul>
               <li>See also {#link|Variables#}</li>

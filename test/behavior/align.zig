@@ -38,7 +38,7 @@ test "large alignment of local constant" {
     try std.testing.expect(@intFromPtr(&x) % 128 == 0);
 }
 
-test "slicing array of length 1 can not assume runtime index is always zero" {
+test "slicing array of length 1 cannot assume runtime index is always zero" {
     if (builtin.zig_backend == .stage2_sparc64) return error.SkipZigTest; // TODO
     if (builtin.zig_backend == .stage2_spirv) return error.SkipZigTest; // flaky
 
