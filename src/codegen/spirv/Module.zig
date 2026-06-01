@@ -3,7 +3,7 @@
 //! current result-id bound, and data structures for querying result-id's of data
 //! which needs to be persistent over different calls to Decl code generation.
 //!
-//! A SPIR-V binary module supports both little- and big endian layout. The layout
+//! A SPIR-V binary module supports both little- and big-endian layout. The layout
 //! is detected by the magic word in the header. Therefore, we can ignore any byte
 //! order throughout the implementation, and just use the host byte order, and make
 //! this a problem for the consumer.

@@ -26,7 +26,7 @@ pub fn loadComptimePtr(sema: *Sema, block: *Block, src: LazySrcLoc, ptr: Value) 
             .none => 0,
             else => |idx| switch (pt.zcu.getTarget().cpu.arch.endian()) {
                 .little => child_bits * @intFromEnum(idx),
-                .big => host_bits - child_bits * (@intFromEnum(idx) + 1), // element order reversed on big endian
+                .big => host_bits - child_bits * (@intFromEnum(idx) + 1), // element order reversed on big-endian
             },
         };
         if (child_bits + bit_offset > host_bits) {
@@ -82,7 +82,7 @@ pub fn storeComptimePtr(
         .none => 0,
         else => |idx| switch (zcu.getTarget().cpu.arch.endian()) {
             .little => Type.fromInterned(ptr_info.child).bitSize(zcu) * @intFromEnum(idx),
-            .big => host_bits - Type.fromInterned(ptr_info.child).bitSize(zcu) * (@intFromEnum(idx) + 1), // element order reversed on big endian
+            .big => host_bits - Type.fromInterned(ptr_info.child).bitSize(zcu) * (@intFromEnum(idx) + 1), // element order reversed on big-endian
         },
     };
     const pseudo_store_ty = if (host_bits > 0) t: {

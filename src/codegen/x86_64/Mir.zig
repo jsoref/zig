@@ -171,7 +171,7 @@ pub const Inst = struct {
         /// ___ Below
         _b,
         /// ___ Below Or Equal
-        /// ___ Big Endian
+        /// ___ Big-Endian
         _be,
         /// ___ Carry
         /// ___ Carry Flag
