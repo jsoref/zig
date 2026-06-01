@@ -4904,7 +4904,7 @@ pub fn initializeLLVMTarget(arch: std.Target.Cpu.Arch) void {
             bindings.LLVMInitializeSPIRVAsmPrinter();
         },
 
-        // LLVM does does not have a backend for these.
+        // LLVM does not have a backend for these.
         .alpha,
         .arceb,
         .ez80,
