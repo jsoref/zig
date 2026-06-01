@@ -659,7 +659,7 @@ fn getSectionData(self: *const InternalObject, index: u32, macho_file: *MachO) e
     } else if (extra.is_objc_selref)
         return &self.objc_selrefs
     else
-        @panic("ref to non-existent section");
+        @panic("ref to nonexistent section");
 }
 
 pub fn addString(self: *InternalObject, allocator: Allocator, string: []const u8) !MachO.String {

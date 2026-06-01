@@ -4176,7 +4176,7 @@ fn createModule(
 
     for (cli_mod.deps) |dep| {
         const dep_index = create_module.modules.getIndex(dep.value) orelse
-            fatal("module {q} depends on non-existent module {q}", .{ name, dep.key });
+            fatal("module {q} depends on nonexistent module {q}", .{ name, dep.key });
         const dep_mod = try createModule(gpa, arena, io, create_module, dep_index, mod, color, environ_map);
         try mod.deps.put(arena, dep.key, dep_mod);
     }

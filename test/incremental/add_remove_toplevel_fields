@@ -71,7 +71,7 @@ const Writer = std.Io.Writer;
 #expect_error=main.zig:15:24: error: no field named 'x' in struct 'main'
 #expect_error=main.zig:1:1: note: struct declared here
 
-#update=remove reference to non-existent field
+#update=remove reference to nonexistent field
 #file=main.zig
 const S = @This();
 pub fn main(init: std.process.Init) !void {

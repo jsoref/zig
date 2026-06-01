@@ -2501,9 +2501,9 @@ pub fn addCliTests(b: *std.Build) *Step {
         run2.expectStdOutEqual("");
         run2.step.dependOn(&run1.step);
 
-        // Test excluding non-existent file
+        // Test excluding nonexistent file
         const run3 = b.addSystemCommand(&.{ b.graph.zig_exe, "fmt", "--exclude", "fmt2.zig", "--exclude", "nonexistent.zig", "." });
-        run3.setName("run zig fmt on directory with non-existent exclusion");
+        run3.setName("run zig fmt on directory with nonexistent exclusion");
         run3.setCwd(tmp_path);
         run3.has_side_effects = true;
         run3.expectStdOutEqual("." ++ s ++ "subdir" ++ s ++ "fmt3.zig\n");
