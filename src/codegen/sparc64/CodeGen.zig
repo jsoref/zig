@@ -1170,7 +1170,7 @@ fn airByteSwap(self: *Self, inst: Air.Inst.Index) !void {
     // - If src is in memory then issue an LD*A with #ASI_P_[opposite-endian]
     // - If src is a register then issue an ST*A with #ASI_P_[opposite-endian]
     //   to a stack slot, then follow with a normal load from said stack slot.
-    //   This is because on some implementations, ASI-tagged memory operations are non-piplelinable
+    //   This is because on some implementations, ASI-tagged memory operations are non-pipelinable
     //   and loads tend to have longer latency than stores, so the sequence will minimize stall.
     // The result will always be either another immediate or stored in a register.
     // TODO: Fold byteswap+store into a single ST*A and load+byteswap into a single LD*A.
