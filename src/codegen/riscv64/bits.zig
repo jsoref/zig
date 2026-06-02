@@ -185,7 +185,7 @@ pub const Register = enum(u8) {
     /// two names. Example being `zero` and `x0` are the same register and have the
     /// same ID, but are two different entries in the enum. We store floating point
     /// registers in the same enum. RISC-V uses the same IDs for `f0` and `x0` by
-    /// infering which register is being talked about given the instruction it's in.
+    /// inferring which register is being talked about given the instruction it's in.
     ///
     /// The goal of this function is to return the same ID for `zero` and `x0` but two
     /// seperate IDs for `x0` and `f0`. We will assume that each register set has 32 registers
