@@ -2566,7 +2566,7 @@ pub const LazySrcLoc = struct {
         call_arg: struct {
             /// Points to the function call AST node.
             call_node_offset: Ast.Node.Offset,
-            /// The index of the argument the source location points to.
+            /// The index of the argument to which the source location points.
             arg_index: u32,
         },
         fn_proto_param: FnProtoParam,
@@ -2671,7 +2671,7 @@ pub const LazySrcLoc = struct {
         pub const ArrayCat = struct {
             /// Points to the array concat AST node.
             array_cat_offset: Ast.Node.Offset,
-            /// The index of the element the source location points to.
+            /// The index of the element to which the source location points.
             elem_index: u32,
         };
 
