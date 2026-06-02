@@ -419,7 +419,7 @@ pub fn resolve(options: Options) ResolveError!Config {
 
     switch (options.output_mode) {
         .Exe => if (options.any_dyn_libs) {
-            // When creating a executable that links to system libraries, we
+            // When creating an executable that links to system libraries, we
             // require dynamic linking, but we must not link static libraries
             // or object files dynamically!
             if (link_mode == .static) return error.SharedLibrariesRequireDynamicLinking;

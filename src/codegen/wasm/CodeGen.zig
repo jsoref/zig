@@ -1245,7 +1245,7 @@ const SimdStoreStrategy = enum {
 /// For a given vector type, returns the `SimdStoreStrategy`.
 /// This means when a given type is 128 bits and either the simd128 or relaxed-simd
 /// features are enabled, the function will return `.direct`. This would allow to store
-/// it using a instruction, rather than an unrolled version.
+/// it using an instruction, rather than an unrolled version.
 pub fn determineSimdStoreStrategy(ty: Type, zcu: *const Zcu, target: *const std.Target) SimdStoreStrategy {
     assert(ty.zigTypeTag(zcu) == .vector);
     if (ty.bitSize(zcu) != 128) return .unrolled;
@@ -6884,7 +6884,7 @@ fn airErrorName(cg: *CodeGen, inst: Air.Inst.Index) InnerError!void {
     const name_ty = Type.slice_const_u8_sentinel_0;
     const abi_size = name_ty.abiSize(pt.zcu);
 
-    // Lowers to a i32.const or i64.const with the error table memory address.
+    // Lowers to an i32.const or i64.const with the error table memory address.
     cg.error_name_table_ref_count += 1;
     try cg.addTag(.error_name_table_ref);
     try cg.emitWValue(operand);

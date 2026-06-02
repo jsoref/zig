@@ -2973,7 +2973,7 @@ fn airOptionalPayloadPtrSet(self: *FuncGen, inst: Air.Inst.Index) Allocator.Erro
     if (!payload_ty.hasRuntimeBits(zcu)) {
         self.maybeMarkAllowZeroAccess(optional_ptr_ty.ptrInfo(zcu));
 
-        // We have a pointer to a i8. We need to set it to 1 and then return the same pointer.
+        // We have a pointer to an i8. We need to set it to 1 and then return the same pointer.
         // Default alignment store because align of the non null bit is 1 anyway.
         _ = try self.wip.store(access_kind, non_null_bit, operand, .default);
         return operand;

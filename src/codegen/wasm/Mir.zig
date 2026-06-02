@@ -332,7 +332,7 @@ pub const Inst = struct {
         ///
         /// Uses `imm32`
         i32_const,
-        /// Loads a i64-bit signed immediate value onto the stack
+        /// Loads an i64-bit signed immediate value onto the stack
         ///
         /// uses `payload` of type `Imm64`
         i64_const,

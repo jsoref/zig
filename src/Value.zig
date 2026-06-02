@@ -217,7 +217,7 @@ pub fn getUnsignedInt(val: Value, zcu: *const Zcu) ?u64 {
     };
 }
 
-/// Asserts the value is an integer and it fits in a i64
+/// Asserts the value is an integer and it fits in an i64
 pub fn toSignedInt(val: Value, zcu: *const Zcu) i64 {
     return switch (val.toIntern()) {
         .bool_false => 0,
