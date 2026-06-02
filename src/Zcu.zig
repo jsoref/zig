@@ -948,7 +948,7 @@ pub const File = struct {
     stat: Cache.File.Stat,
 
     /// Whether this file is the generated file of a "builtin" module. This matters because those
-    /// files are generated and stored in-nemory rather than being read off-disk. The rest of the
+    /// files are generated and stored in-memory rather than being read off-disk. The rest of the
     /// pipeline generally shouldn't care about this.
     is_builtin: bool,
 
