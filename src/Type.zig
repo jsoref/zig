@@ -3419,7 +3419,7 @@ fn shouldDedupeType(ty: Type, ctx: *Comparison, pt: Zcu.PerThread) error{OutOfMe
 /// The comparison recursively walks all types given and notes how many times
 /// each subtype occurs. It then while recursively printing decides for each
 /// subtype whether to print the type inline or create a placeholder based on
-/// the subtype length and number of occurences. Placeholders are then found by
+/// the subtype length and number of occurrences. Placeholders are then found by
 /// iterating `type_dedupe_cache` which caches the inline/placeholder decisions.
 pub const Comparison = struct {
     type_occurrences: std.AutoArrayHashMapUnmanaged(Type, u16),
