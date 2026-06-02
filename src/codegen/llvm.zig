@@ -2084,7 +2084,7 @@ pub const Object = struct {
             .vector => {
                 const elem_ty = ty.childType(zcu);
                 // Vector elements cannot be padded since that would make
-                // @bitSizeOf(elem) * len > @bitSizOf(vec).
+                // @bitSizeOf(elem) * len > @bitSizeOf(vec).
                 // Neither gdb nor lldb seem to be able to display non-byte sized
                 // vectors properly.
                 const debug_elem_type = switch (elem_ty.zigTypeTag(zcu)) {
