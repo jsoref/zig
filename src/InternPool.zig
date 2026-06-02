@@ -967,7 +967,7 @@ const Local = struct {
         /// When we need to allocate any long-lived buffer for mutating the `InternPool`, it is
         /// allocated into this `arena` (for the `Id` of the thread performing the mutation). An
         /// arena is used to avoid contention on the GPA, and to ensure that any code which retains
-        /// references to old state remains valid. For instance, when reallocing hashmap metadata,
+        /// references to old state remains valid. For instance, when reallocating hashmap metadata,
         /// a racing lookup on another thread may still retain a handle to the old metadata pointer,
         /// so it must remain valid.
         /// This arena's lifetime is tied to that of `Compilation`, although it can be cleared on
