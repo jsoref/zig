@@ -160,7 +160,7 @@ pub const TrackedInst = extern struct {
             }
         };
         comptime {
-            // The fields should be tightly packed. See also serialiation logic in `Compilation.saveState`.
+            // The fields should be tightly packed. See also serialization logic in `Compilation.saveState`.
             assert(@sizeOf(@This()) == @sizeOf(FileIndex) + @sizeOf(ZirIndex));
         }
     };
