@@ -265,7 +265,7 @@ test "load non byte-sized value in struct" {
     if (builtin.zig_backend == .stage2_riscv64) return error.SkipZigTest; // TODO
 
     // note: this bug is triggered by the == operator, expectEqual will hide it
-    // using ptrCast not to depend on unitialised memory state
+    // using ptrCast not to depend on uninitialised memory state
 
     var struct0: struct {
         p: Piece,
@@ -300,7 +300,7 @@ test "load non byte-sized value in union" {
     if (builtin.zig_backend == .stage2_riscv64) return error.SkipZigTest;
 
     // note: this bug is triggered by the == operator, expectEqual will hide it
-    // using ptrCast not to depend on unitialised memory state
+    // using ptrCast not to depend on uninitialised memory state
 
     var union0: packed union {
         p: packed struct(u8) {
