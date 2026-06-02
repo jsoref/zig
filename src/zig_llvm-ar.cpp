@@ -1341,7 +1341,7 @@ static int ar_main(int argc, char **argv) {
 
   cl::ExpandResponseFiles(Saver, getRspQuoting(ArrayRef(argv, argc)), Argv);
 
-  // Get BitMode from enviorment variable "OBJECT_MODE" for AIX OS, if
+  // Get BitMode from environment variable "OBJECT_MODE" for AIX OS, if
   // specified.
   if (object::Archive::getDefaultKind() == object::Archive::K_AIXBIG) {
     BitMode = getBitMode(getenv("OBJECT_MODE"));
@@ -1476,7 +1476,7 @@ static int ranlib_main(int argc, char **argv) {
   }
 
   if (object::Archive::getDefaultKind() == object::Archive::K_AIXBIG) {
-    // If not specify -X option, get BitMode from enviorment variable
+    // If not specify -X option, get BitMode from environment variable
     // "OBJECT_MODE" for AIX OS if specify.
     if (!HasAIXXOption) {
       if (char *EnvObjectMode = getenv("OBJECT_MODE")) {
