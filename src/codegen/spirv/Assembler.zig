@@ -1052,7 +1052,7 @@ fn nextToken(ass: *Assembler, start_offset: u32) !Token {
                 ' ', '\t', '\r', '\n', '=', '|' => break,
                 else => {
                     try ass.addError(offset, "unexpected character after string literal", .{});
-                    // The token is still unmistakibly a string.
+                    // The token is still unmistakably a string.
                     break;
                 },
             },
