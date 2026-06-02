@@ -489,15 +489,15 @@ test "function argument tuple used as struct field" {
     if (builtin.zig_backend == .stage2_spirv) return error.SkipZigTest;
 
     const S = struct {
-        fn DeleagateWithContext(comptime Function: type) type {
+        fn DelegateWithContext(comptime Function: type) type {
             const ArgArgs = std.meta.ArgsTuple(Function);
             return struct {
                 t: ArgArgs,
             };
         }
 
-        const OnConfirm = DeleagateWithContext(fn (bool) void);
-        const CustomDraw = DeleagateWithContext(fn (?OnConfirm) void);
+        const OnConfirm = DelegateWithContext(fn (bool) void);
+        const CustomDraw = DelegateWithContext(fn (?OnConfirm) void);
     };
 
     var c: S.CustomDraw = undefined;
