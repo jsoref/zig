@@ -454,7 +454,7 @@ pub const Path = struct {
         return .{ dir, p.sub_path };
     }
 
-    pub const format = unreachable; // do not format direcetly
+    pub const format = unreachable; // do not format directly
     pub fn fmt(p: Path, comp: *Compilation) Formatter {
         return .{ .p = p, .comp = comp };
     }
