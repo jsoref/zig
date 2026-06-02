@@ -2227,7 +2227,7 @@ fn intBitwiseNot(sema: *Sema, val: Value, ty: Type) !Value {
     result_bigint.bitNotWrap(val_bigint, info.signedness, info.bits);
     return pt.intValue_big(ty, result_bigint.toConst());
 }
-/// Given an integer or boolean type, creates an value of that with the bit pattern 0xAA.
+/// Given an integer or boolean type, creates a value of that with the bit pattern 0xAA.
 /// This is used to convert undef values into 0xAA when performing e.g. bitwise operations.
 /// TODO: Eliminate this function and everything it stands for (related: #19634).
 fn intValueAa(sema: *Sema, ty: Type) !Value {

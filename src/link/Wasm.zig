@@ -83,7 +83,7 @@ objects: std.ArrayList(Object) = .empty,
 func_types: std.AutoArrayHashMapUnmanaged(FunctionType, void) = .empty,
 /// Provides a mapping of both imports and provided functions to symbol name.
 /// Local functions may be unnamed.
-/// Key is symbol name, however the `FunctionImport` may have an name override for the import name.
+/// Key is symbol name, however the `FunctionImport` may have a name override for the import name.
 object_function_imports: std.AutoArrayHashMapUnmanaged(String, FunctionImport) = .empty,
 /// All functions for all objects.
 object_functions: std.ArrayList(ObjectFunction) = .empty,

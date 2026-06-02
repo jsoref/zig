@@ -26,7 +26,7 @@ test "pointer arithmetic with slices" {
     try expectEqual(4, slice.len);
 
     slice.ptr += 1;
-    // now the slice is in an bad state since len has not been updated
+    // now the slice is in a bad state since len has not been updated
 
     try expectEqual(2, slice[0]);
     try expectEqual(4, slice.len);
