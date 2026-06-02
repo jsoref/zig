@@ -2425,7 +2425,7 @@ const StringTable = struct {
     };
 
     pub fn get(st: *StringTable, elf: *Elf, shndx: Section.Index, key: []const u8) Error!u32 {
-        // If we are in `initHeaders` the strtab might not be initalized yet, so we need to special
+        // If we are in `initHeaders` the strtab might not be initialized yet, so we need to special
         // case the empty string.
         if (key.len == 0) return 0;
 
