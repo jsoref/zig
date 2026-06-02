@@ -2148,7 +2148,7 @@ fn analyzeNavType(
 
     // Now for the question of the day: are the type and modifiers the same as before? If they are,
     // then we should actually avoid calling `ip.resolveNav`. This is because `analyzeNavVal` will
-    // later wanmt to look at the resolved *value* to figure out whether *that* has changed: if we
+    // later want to look at the resolved *value* to figure out whether *that* has changed: if we
     // threw that data away now, it would have to assume the value *had* changed even if it actually
     // hadn't, which could spin off a bunch of unnecessary re-analysis! OTOH, if the type *has*
     // changed, then we obviously know that the value will also have changed, so resetting the value
