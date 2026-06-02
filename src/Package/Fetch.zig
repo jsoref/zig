@@ -56,7 +56,7 @@ location_tok: std.zig.Ast.TokenIndex,
 hash_tok: std.zig.Ast.OptionalTokenIndex,
 name_tok: std.zig.Ast.TokenIndex,
 lazy_status: LazyStatus,
-/// Same as `parent_packge_root` except it is unchanged when recursing into
+/// Same as `parent_package_root` except it is unchanged when recursing into
 /// relative file paths (as opposed to URL).
 remote_package_root: Cache.Path,
 parent_package_root: Cache.Path,
