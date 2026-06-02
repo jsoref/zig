@@ -5572,7 +5572,7 @@ fn updateGotEntry(elf: *Elf, got_index: usize) void {
             } };
         },
         .tlsgd0 => |sym| switch (elf.shndx.dynamic) {
-            .UNDEF => .{ .unsigned = 1 }, // TLS module ID for exexcutable
+            .UNDEF => .{ .unsigned = 1 }, // TLS module ID for executable
             else => .{
                 .reloc = .{
                     .type = .{ .X86_64 = .DTPMOD64 },
@@ -5605,7 +5605,7 @@ fn updateGotEntry(elf: *Elf, got_index: usize) void {
             },
         },
         .tlsld0 => switch (elf.shndx.dynamic) {
-            .UNDEF => .{ .unsigned = 1 }, // TLS module ID for exexcutable
+            .UNDEF => .{ .unsigned = 1 }, // TLS module ID for executable
             else => .{ .reloc = .{
                 .type = .{ .X86_64 = .DTPMOD64 },
                 .dynsym_index = 0,
