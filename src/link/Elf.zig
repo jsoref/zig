@@ -2873,7 +2873,7 @@ pub fn allocateAllocSections(self: *Elf) !void {
                 });
 
                 if (shdr.sh_offset > 0) {
-                    // Get size actually commited to the output file.
+                    // Get size actually committed to the output file.
                     const existing_size = self.sectionSize(shndx);
                     try self.base.copyRangeAll(shdr.sh_offset, new_offset, existing_size);
                 }
