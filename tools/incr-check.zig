@@ -951,7 +951,7 @@ fn parseExpectedError(str: []const u8, l: usize) Case.ExpectedError {
     else if (std.mem.eql(u8, error_or_note_str, "note"))
         true
     else
-        fatal("line {d}: expeted 'error' or 'note', found '{s}'", .{ l, error_or_note_str });
+        fatal("line {d}: expected 'error' or 'note', found '{s}'", .{ l, error_or_note_str });
 
     const message = std.mem.trim(u8, it.rest(), " ");
     if (message.len == 0) fatal("line {d}: empty error message", .{l});
