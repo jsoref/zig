@@ -2028,7 +2028,7 @@ pub fn create(gpa: Allocator, arena: Allocator, io: Io, diag: *CreateDiagnostic,
 
         // Like with ubsan_rt we want to go through the `_ = @import("zigc")`
         // approach if possible since it uses even more of the standard library
-        // and can thus reduce further unnecesary bloat.
+        // and can thus reduce further unnecessary bloat.
         const zigc_strat: RtStrat = s: {
             if (options.skip_linker_dependencies) break :s .none;
             if (target.ofmt == .c) break :s .none;
