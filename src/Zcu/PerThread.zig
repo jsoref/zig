@@ -2592,7 +2592,7 @@ pub fn populateModuleRootTable(pt: Zcu.PerThread) error{
 ///
 /// Live files are also added as file system inputs if necessary.
 ///
-/// Returns whether there is any live file which is failed. Howewver, this function does *not*
+/// Returns whether there is any live file which is failed. However, this function does *not*
 /// modify `pt.zcu.skip_analysis_this_update`.
 ///
 /// If an error is returned, `pt.zcu.alive_files` might contain undefined values.
