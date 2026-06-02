@@ -2158,7 +2158,7 @@ fn initSpecialPhdrs(self: *Elf) !void {
     }
 }
 
-/// We need to sort constructors/destuctors in the following sections:
+/// We need to sort constructors/destructors in the following sections:
 /// * .init_array
 /// * .fini_array
 /// * .preinit_array
