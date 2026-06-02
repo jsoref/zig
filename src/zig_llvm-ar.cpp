@@ -255,7 +255,7 @@ static std::string OutputDir;
 static std::vector<std::unique_ptr<MemoryBuffer>> ArchiveBuffers;
 static std::vector<std::unique_ptr<object::Archive>> Archives;
 
-// This variable holds the list of member files to proecess, as given
+// This variable holds the list of member files to process, as given
 // on the command line.
 static std::vector<StringRef> Members;
 
