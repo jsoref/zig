@@ -652,7 +652,7 @@ fn optimalBranchType(emit: *Emit, tag: Mir.Inst.Tag, offset: i64) !BranchType {
         // TODO use the following strategy to implement long branches:
         // - Negate the conditional and target of the original instruction;
         // - In the space immediately after the branch, load
-        //   the address of the original target, preferrably in
+        //   the address of the original target, preferably in
         //   a PC-relative way, into %o7; and
         // - jmpl %o7 + %g0, %g0
 
