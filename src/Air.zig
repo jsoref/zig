@@ -2525,11 +2525,11 @@ pub const CompilerRtFunc = enum(u32) {
     __fixhfsi, __fixsfsi, __fixdfsi, __fixxfsi, __fixtfsi, // float to i32
     __fixhfdi, __fixsfdi, __fixdfdi, __fixxfdi, __fixtfdi, // float to i64
     __fixhfti, __fixsfti, __fixdfti, __fixxfti, __fixtfti, // float to i128
-    __fixhfei, __fixsfei, __fixdfei, __fixxfei, __fixtfei, // float to arbitray iN
+    __fixhfei, __fixsfei, __fixdfei, __fixxfei, __fixtfei, // float to arbitrary iN
     __fixunshfsi, __fixunssfsi, __fixunsdfsi, __fixunsxfsi, __fixunstfsi, // float to u32
     __fixunshfdi, __fixunssfdi, __fixunsdfdi, __fixunsxfdi, __fixunstfdi, // float to u64
     __fixunshfti, __fixunssfti, __fixunsdfti, __fixunsxfti, __fixunstfti, // float to u128
-    __fixunshfei, __fixunssfei, __fixunsdfei, __fixunsxfei, __fixunstfei, // float to arbitray uN
+    __fixunshfei, __fixunssfei, __fixunsdfei, __fixunsxfei, __fixunstfei, // float to arbitrary uN
 
     // zig fmt: on
 
