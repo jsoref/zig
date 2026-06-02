@@ -584,7 +584,7 @@ fn lowerBranches(emit: *Emit) !void {
         }
     }
 
-    // Further passes: Until all branches are lowered, interate
+    // Further passes: Until all branches are lowered, iterate
     // through all instructions and calculate new offsets and
     // potentially new branch types
     var all_branches_lowered = false;
