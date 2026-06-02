@@ -2667,7 +2667,7 @@ fn shdrToPhdrFlags(sh_flags: u64) u32 {
 }
 
 /// Returns maximum number of program headers that may be emitted by the linker.
-/// (This is an upper bound so that we can reserve enough space for the header and progam header
+/// (This is an upper bound so that we can reserve enough space for the header and program header
 /// table without running out of space and being forced to move things around.)
 fn getMaxNumberOfPhdrs() u64 {
     // The estimated maximum number of segments the linker can emit for input sections are:
