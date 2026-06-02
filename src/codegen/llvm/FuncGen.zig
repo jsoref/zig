@@ -7476,7 +7476,7 @@ fn llvmAllocaAddressSpace(target: *const std.Target) Builder.AddrSpace {
     return switch (target.cpu.arch) {
         // On amdgcn, locals should be generated into the private address space.
         // To make Zig not impossible to use, these are then converted to addresses in the
-        // generic address space and treates as regular pointers. This is the way that HIP also does it.
+        // generic address space and treats as regular pointers. This is the way that HIP also does it.
         .amdgcn => Builder.AddrSpace.amdgpu.private,
         else => .default,
     };
