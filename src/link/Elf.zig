@@ -799,7 +799,7 @@ fn flushInner(self: *Elf, arena: Allocator, tid: Zcu.PerThread.Id) !void {
     // Now, we are ready to resolve the symbols across all input files.
     // We will first resolve the files in the ZigObject, next in the parsed
     // input Object files.
-    // Any qualifing unresolved symbol will be upgraded to an absolute, weak
+    // Any qualifying unresolved symbol will be upgraded to an absolute, weak
     // symbol for potential resolution at load-time.
     try self.resolveSymbols();
     self.markEhFrameAtomsDead();
