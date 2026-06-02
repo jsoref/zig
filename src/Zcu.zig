@@ -5367,7 +5367,7 @@ pub const CodegenTaskPool = struct {
         func_index: InternPool.Index,
         orig_air: Air,
     ) CodegenResult {
-        // We own `air` now, so we are responsbile for freeing it.
+        // We own `air` now, so we are responsible for freeing it.
         var air = orig_air;
         defer air.deinit(zcu.comp.gpa);
         const io = zcu.comp.io;
