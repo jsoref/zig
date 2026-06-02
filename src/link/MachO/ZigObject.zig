@@ -812,7 +812,7 @@ pub fn updateFunc(
     };
 
     if (debug_wip_nav) |*wip_nav| self.dwarf.?.finishWipNavFunc(pt, func.owner_nav, code.len, wip_nav) catch |err|
-        return macho_file.base.cgFail(func.owner_nav, "falied to finish dwarf function: {s}", .{@errorName(err)});
+        return macho_file.base.cgFail(func.owner_nav, "failed to finish dwarf function: {s}", .{@errorName(err)});
 
     // Exports will be updated by `Zcu.processExports` after the update.
     if (old_rva != new_rva and old_rva > 0) {
