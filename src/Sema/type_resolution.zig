@@ -276,7 +276,7 @@ pub fn resolveStructLayout(sema: *Sema, struct_ty: Type) CompileError!void {
         }
 
         // We also resolve the default values of any `comptime` fields now. This is not necessary in
-        // the case of a reified struct because the the default values were already poulated and
+        // the case of a reified struct because the the default values were already populated and
         // validated by `Sema.zirReifyStruct`.
         if (any_comptime_fields) {
             try resolveStructDefaultsInner(sema, &block, &struct_obj, .comptime_fields);
