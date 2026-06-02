@@ -2676,7 +2676,7 @@ pub const LazySrcLoc = struct {
         };
 
         pub const TupleField = struct {
-            /// Points to the AST node of the tuple type decaration.
+            /// Points to the AST node of the tuple type declaration.
             tuple_decl_node_offset: Ast.Node.Offset,
             /// The index of the tuple field the source location points to.
             elem_index: u32,
