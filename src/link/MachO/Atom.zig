@@ -428,7 +428,7 @@ pub fn free(self: *Atom, macho_file: *MachO) void {
 
     // TODO create relocs free list
     self.freeRelocs(macho_file);
-    // TODO figure out how to free input section mappind in ZigModule
+    // TODO figure out how to free input section mapping in ZigModule
     // const zig_object = macho_file.zigObjectPtr().?
     // assert(zig_object.atoms.swapRemove(self.atom_index));
     self.* = .{};

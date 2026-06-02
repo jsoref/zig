@@ -200,7 +200,7 @@ pub fn free(self: *Atom, elf_file: *Elf) void {
         .zig_object => |zo| {
             // TODO create relocs free list
             self.freeRelocs(zo);
-            // TODO figure out how to free input section mappind in ZigModule
+            // TODO figure out how to free input section mapping in ZigModule
             // const zig_object = elf_file.zigObjectPtr().?
             // assert(zig_object.atoms.swapRemove(self.atom_index));
         },
