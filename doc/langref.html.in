@@ -3688,7 +3688,7 @@ void do_a_thing(struct Foo *foo) {
       </p>
       <p>
       The result type mechanism is utilized by casting builtins such as {#syntax#}@intCast{#endsyntax#}.
-      Rather than taking as an argument the type to cast to, these builtins use their result type to
+      Rather than taking the type as an argument to cast to, these builtins use their result type to
       determine this information. The result type is often known from context; where it is not, the
       {#syntax#}@as{#endsyntax#} builtin can be used to explicitly provide a result type.
       </p>
