@@ -188,7 +188,7 @@ pub const Register = enum(u8) {
     /// inferring which register is being talked about given the instruction it's in.
     ///
     /// The goal of this function is to return the same ID for `zero` and `x0` but two
-    /// seperate IDs for `x0` and `f0`. We will assume that each register set has 32 registers
+    /// separate IDs for `x0` and `f0`. We will assume that each register set has 32 registers
     /// and is repeated twice, once for the named version, once for the number version.
     pub fn id(reg: Register) std.math.IntFittingRange(0, @typeInfo(Register).@"enum".field_names.len) {
         const base = switch (@intFromEnum(reg)) {
