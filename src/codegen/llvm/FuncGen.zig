@@ -6045,7 +6045,7 @@ fn airPrefetch(self: *FuncGen, inst: Air.Inst.Index) Allocator.Error!Builder.Val
     comptime assert(@intFromEnum(std.lang.PrefetchOptions.Cache.instruction) == 0);
     comptime assert(@intFromEnum(std.lang.PrefetchOptions.Cache.data) == 1);
 
-    // LLVM fails during codegen of instruction cache prefetchs for these architectures.
+    // LLVM fails during codegen of instruction cache prefetches for these architectures.
     // This is an LLVM bug as the prefetch intrinsic should be a noop if not supported
     // by the target.
     // To work around this, don't emit llvm.prefetch in this case.
