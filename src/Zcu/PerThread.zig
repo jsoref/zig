@@ -2239,7 +2239,7 @@ pub fn ensureFuncBodyUpToDate(
                 log.debug("mark transitive analysis failure for {f}", .{zcu.fmtAnalUnit(anal_unit)});
             }
             // We consider the IES to be outdated if the function previously succeeded analysis; in this case,
-            // we need to re-analyze dependants to ensure they hit a transitive error here, rather than reporting
+            // we need to re-analyze dependents to ensure they hit a transitive error here, rather than reporting
             // a different error later (which may now be invalid).
             break :res .{ !prev_failed, true };
         },
