@@ -1479,7 +1479,7 @@ const FlushTypes = struct {
         const rendered = &c.types.items[@intFromEnum(pool_index)];
         ft.processDeps(&rendered.definition_deps);
         if (rendered.fwd_decl.len == 0 and ft.status.contains(pool_index)) {
-            // `doTypeFwd` already rendered the defintion, we just had to complete the type by
+            // `doTypeFwd` already rendered the definition, we just had to complete the type by
             // fully resolving its dependencies.
         } else if (rendered.definition.len > 0) {
             ft.f.appendBufAssumeCapacity(rendered.definition.get(c));

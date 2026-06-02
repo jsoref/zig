@@ -5303,7 +5303,7 @@ fn addRelocAssumeCapacity(
                 // `SymbolReloc` at some point, we can't do that in `GotReloc.apply`, because that
                 // function must be idempotent to ensure reproducible binaries. I think we would
                 // need to do that as soon as the operation is known to be relaxable (e.g. because
-                // we found a defininition for a non-preemptible symbol).
+                // we found a definition for a non-preemptible symbol).
                 .GOTPCRELX => elf.addGotRelocAssumeCapacity(node, offset, .{ .symbol = target }, addend, .rel32),
                 .REX_GOTPCRELX => elf.addGotRelocAssumeCapacity(node, offset, .{ .symbol = target }, addend, .rel32),
 
