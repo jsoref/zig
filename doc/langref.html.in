@@ -7575,7 +7575,7 @@ fn readU32Be() u32 {}
             <pre>{#syntax#}resume{#endsyntax#}</pre>
           </th>
           <td>
-            {#syntax#}resume{#endsyntax#} will continue execution of a function frame after the point the function was suspended.
+            {#syntax#}resume{#endsyntax#} will continue execution of a function frame after the point where the function was suspended.
           </td>
         </tr>
         <tr>
