@@ -131,7 +131,7 @@ pub const empty: InternPool = .{
 };
 
 /// A `TrackedInst.Index` provides a single, unchanging reference to a ZIR instruction across a whole
-/// compilation. From this index, you can acquire a `TrackedInst`, which containss a reference to both
+/// compilation. From this index, you can acquire a `TrackedInst`, which contains a reference to both
 /// the file which the instruction lives in, and the instruction index itself, which is updated on
 /// incremental updates by `Zcu.updateZirRefs`.
 pub const TrackedInst = extern struct {

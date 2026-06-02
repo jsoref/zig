@@ -121,7 +121,7 @@ const SwitchDispatchInfo = struct {
         /// The index into the jump table is the dispatch condition minus `min`.
         /// The table values are `blockaddress` constants corresponding to blocks in `case_blocks`.
         table: Builder.Constant,
-        /// `true` if `table` conatins a reference to the `else` block.
+        /// `true` if `table` contains a reference to the `else` block.
         /// In this case, the `indirectbr` must include the `else` block in its target list.
         table_includes_else: bool,
     };
