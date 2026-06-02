@@ -5327,7 +5327,7 @@ fn bitcast(cg: *CodeGen, dest_ty: Type, src_ty: Type, operand: WValue) InnerErro
     return switch (operand) {
         // for stack offset, return a pointer to this offset.
         .stack_offset => try cg.buildPointerOffset(operand, 0, .new),
-        else => null, // caller should use cg.reuseOperand, if returnes for AIR
+        else => null, // caller should use cg.reuseOperand, if returns for AIR
     };
 }
 
