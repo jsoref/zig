@@ -241,7 +241,7 @@ pub fn addCases(cases: *@import("tests.zig").StackTracesContext, os: std.Target.
         .unwind = .any,
         .expect_panic = true,
         .expect = switch (os) {
-            // LLVM doesn't emit column info in the binary annotations for inlinee callees in PDBs,
+            // LLVM doesn't emit column info in the binary annotations for inline callees in PDBs,
             // so the first location has only a row.
             .windows =>
             \\panic: oh no
