@@ -1248,7 +1248,7 @@ pub fn ensureComptimeUnitUpToDate(pt: Zcu.PerThread, cu_id: InternPool.ComptimeU
 
 /// Re-analyzes a `ComptimeUnit`. The unit has already been determined to be out-of-date, and old
 /// side effects (exports/references/etc) have been dropped. If semantic analysis fails, this
-/// function will return `error.AnalysisFail`, and it is the caller's reponsibility to add an entry
+/// function will return `error.AnalysisFail`, and it is the caller's responsibility to add an entry
 /// to `transitive_failed_analysis` if necessary.
 fn analyzeComptimeUnit(pt: Zcu.PerThread, cu_id: InternPool.ComptimeUnit.Id) Zcu.CompileError!void {
     const zcu = pt.zcu;
