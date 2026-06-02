@@ -2785,7 +2785,7 @@ pub fn allocateAllocSections(self: *Elf) !void {
     // As the base address we take the end address of the PHDR table.
     // When allocating we first find the largest required alignment
     // of any section that is contained in a cover and use it to align
-    // the start address of the segement (and first section).
+    // the start address of the segment (and first section).
     const phdr_table = &self.phdrs.items[self.phdr_indexes.table_load.int().?];
     var addr = phdr_table.p_vaddr + phdr_table.p_memsz;
 
