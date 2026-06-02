@@ -581,7 +581,7 @@ pub fn addCases(cases: *@import("tests.zig").ErrorTracesContext, os: std.Target.
     cases.addCase(.{
         .name = "trace through inline call",
         // The main function has two inline calls to ensure
-        // that inlinees in PDBs are properly deduplicated.
+        // that inlines in PDBs are properly deduplicated.
         .source =
         \\pub fn main() !void {
         \\    try foo(false);

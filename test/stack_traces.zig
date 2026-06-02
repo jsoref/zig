@@ -227,7 +227,7 @@ pub fn addCases(cases: *@import("tests.zig").StackTracesContext, os: std.Target.
     cases.addCase(.{
         .name = "simple inline panic",
         // The main function has two inline calls to ensure
-        // that inlinees in PDBs are properly deduplicated.
+        // that inlines in PDBs are properly deduplicated.
         .source =
         \\pub fn main() void {
         \\    foo(false);
