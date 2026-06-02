@@ -94,7 +94,7 @@ pub fn assemble(ass: *Assembler, src: []const u8) Error!void {
 }
 
 const ErrorMsg = struct {
-    /// The offset in bytes from the start of `src` that this error occured.
+    /// The offset in bytes from the start of `src` that this error occurred.
     byte_offset: u32,
     msg: []const u8,
 };

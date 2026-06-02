@@ -4940,7 +4940,7 @@ fn workerDocsWasmFallible(comp: *Compilation, prog_node: std.Progress.Node) SubU
                 // .extended_const, not supported by Safari
                 .reference_types,
                 //.relaxed_simd, not supported by Firefox or Safari
-                // observed to cause Error occured during wast conversion :
+                // observed to cause Error occurred during wast conversion :
                 // Unknown operator: 0xfd058 in Firefox 117
                 //.simd128,
                 // .tail_call, not supported by Safari
