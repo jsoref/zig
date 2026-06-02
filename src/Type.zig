@@ -25,7 +25,7 @@ pub fn zigTypeTag(ty: Type, zcu: *const Zcu) std.lang.TypeId {
 
 /// Every type is a member of exactly one "class" which determines:
 /// * whether values of the type can exist at all
-/// * whether values of the type can be runtime-knwon
+/// * whether values of the type can be runtime-known
 /// * whether the type is considered comptime-only
 /// * whether the type has runtime bits (nonzero ABI size)
 pub const Class = enum(u3) {
