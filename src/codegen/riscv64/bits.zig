@@ -162,7 +162,7 @@ pub const Register = enum(u8) {
     fa0, fa1, // float arg/ret. caller saved.
     fa2, fa3, fa4, fa5, fa6, fa7, // float arg. called saved.
     fs2, fs3, fs4, fs5, fs6, fs7, fs8, fs9, fs10, fs11,  // float saved. callee saved.
-    ft8, ft9, ft10, ft11, // foat temporaries. caller saved.
+    ft8, ft9, ft10, ft11, // float temporaries. caller saved.
 
     // this register is accessed only through API instructions instead of directly
     // fcsr,
