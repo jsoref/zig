@@ -3625,7 +3625,7 @@ pub fn queueComptimeUnitAnalysis(zcu: *Zcu, cu: InternPool.ComptimeUnit.Id) Allo
     zcu.updateTracyOutdatedPlots();
 }
 
-/// If `unit` was marked as outdated or porentially outdated, clears that status and returns `true`.
+/// If `unit` was marked as outdated or potentially outdated, clears that status and returns `true`.
 /// Otherwise, returns `false`.
 pub fn clearOutdatedState(zcu: *Zcu, unit: AnalUnit) bool {
     const io = zcu.comp.io;
